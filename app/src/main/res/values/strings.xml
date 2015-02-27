@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Practica8PMDMJuego</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="tostada">Terminado unos ajustes, espera un momento ;)</string>
+    <string name="pm">Puntuación máxima:</string>
+</resources>
