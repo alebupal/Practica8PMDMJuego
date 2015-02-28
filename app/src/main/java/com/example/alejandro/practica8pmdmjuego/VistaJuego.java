@@ -1,7 +1,6 @@
 package com.example.alejandro.practica8pmdmjuego;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,14 +10,10 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.media.AudioManager;
-import android.media.SoundPool;
-import android.os.AsyncTask;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.VelocityTracker;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -36,12 +31,10 @@ public class VistaJuego extends SurfaceView implements SurfaceHolder.Callback {
     private Drawable fondo;
     Timer temporizador;
     int puntuacion = 0;
-    private int segundos = 31;
+    private int segundos = 21;
 
     Paint paint = new Paint();
 
-    private  SoundPool sp;
-    private int cancionReloj, cancionDisparo,cancionPajaro;
     private int velocidadx=20,velocidady=10;
 
 
@@ -63,7 +56,7 @@ public class VistaJuego extends SurfaceView implements SurfaceHolder.Callback {
         bmp = BitmapFactory.decodeResource(getResources(), R.drawable.sprite3);
 
         paint.setColor(Color.BLACK);
-        paint.setTextSize(50);
+        paint.setTextSize(60);
 
         sprites = new Sprite[5];
         for (int i = 0; i < sprites.length; i++) {
@@ -174,7 +167,7 @@ public class VistaJuego extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Musica.cDisparo();
+
         if (System.currentTimeMillis() - ultimoClick > 300) {
             ultimoClick = System.currentTimeMillis();
             float x, y;
@@ -192,6 +185,8 @@ public class VistaJuego extends SurfaceView implements SurfaceHolder.Callback {
                         sprites[i].setPosicionAleatorio();
                         puntuacion++;
                         break;
+                    }else{
+                        Musica.cDisparo();
                     }
                 }
             }

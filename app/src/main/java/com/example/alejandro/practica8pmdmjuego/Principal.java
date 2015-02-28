@@ -5,16 +5,10 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
-import android.os.AsyncTask;
 import android.os.PowerManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,8 +18,6 @@ public class Principal extends Activity {
     private MediaPlayer mp;
     private ImageButton btEmpezar;
     private TextView tv;
-
-    private ProgressDialog dialogo;
 
 
     @Override
@@ -111,7 +103,7 @@ public class Principal extends Activity {
         super.onPause();
     }
     private void tostada(String s) {
-        Toast.makeText(this, s, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

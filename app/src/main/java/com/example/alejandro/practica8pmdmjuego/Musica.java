@@ -32,7 +32,7 @@ public class Musica {
         sp.play(cancionReloj,1,1,1,0,1);
     }
     static void cDisparo(){
-        sp.play(cancionDisparo,0.2f,0.2f,1,0,1);
+        sp.play(cancionDisparo,0.1f,0.1f,1,0,1);
     }
     static void cPajaro(){
         sp.play(cancionPajaro,3,3,1,0,1);

@@ -4,7 +4,6 @@ package com.example.alejandro.practica8pmdmjuego;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Rect;
-import android.util.Log;
 
 import java.util.Random;
 
